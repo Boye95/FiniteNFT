@@ -83,8 +83,12 @@ header {
         .wallet {
             background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
             color: white;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 15px;
+            &:hover {
+                background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
+                color: white;
+            }
         }
     }
 }
@@ -99,6 +103,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    height: 70%;
     width: 60%;
     margin-left: 4rem;
     #big-text {
@@ -112,10 +117,88 @@ header {
         color: #49536E;
     }
     #bot {
+        @include general-semibold;
         display: flex;
+        gap: 2rem;
+    }
+    button {
+        background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
+        color: white;
+        padding: 15px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        @include general-semibold;
+        cursor: pointer;
+    }
+    #play {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 }
 
 #nft-section {
     width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.border1 {
+    height: 30rem;
+}
+
+.border2 {
+    height: 30rem;
+    transform: scaleX(-1);
+    position: relative;
+    top: -30rem;
+}
+
+.nft {
+    height: 20rem;
+    position: relative;
+    top: -58.8rem;
+    left: 1.5rem;
+    transform: rotate(1deg);
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -57rem;
+    left: 3rem;
+    width: 18rem;
+    @include general-semibold;
+    transform: rotate(-3deg);
+}
+
+#time {
+    line-height: 25px;
+    #beep {
+        font-size: 18px;
+        color: #313132;
+    }
+    #rem-time {
+        color: #B3B3B3;
+        font-size: 13px;
+    }
+}
+
+#bid {
+    line-height: 25px;
+    #cost {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 7px;
+        color: #313132;
+        font-size: 18px;
+    }
+    #highest-bid {
+        color: #B3B3B3;
+        font-size: 13px;
+    }
 }

@@ -78,8 +78,12 @@ header #nav a:hover {
 header #nav .wallet {
   background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 15px;
+}
+header #nav .wallet:hover {
+  background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
+  color: white;
 }
 
 #banner {
@@ -92,6 +96,7 @@ header #nav .wallet {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  height: 70%;
   width: 60%;
   margin-left: 4rem;
 }
@@ -108,11 +113,92 @@ header #nav .wallet {
   color: #49536E;
 }
 #text-banner #bot {
+  font-family: "General Sans", sans-serif;
+  font-weight: 600;
   display: flex;
+  gap: 2rem;
+}
+#text-banner button {
+  background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-family: "General Sans", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+#text-banner #play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 #nft-section {
   width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.border1 {
+  height: 30rem;
+}
+
+.border2 {
+  height: 30rem;
+  transform: scaleX(-1);
+  position: relative;
+  top: -30rem;
+}
+
+.nft {
+  height: 20rem;
+  position: relative;
+  top: -58.8rem;
+  left: 1.5rem;
+  transform: rotate(1deg);
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -57rem;
+  left: 3rem;
+  width: 18rem;
+  font-family: "General Sans", sans-serif;
+  font-weight: 600;
+  transform: rotate(-3deg);
+}
+
+#time {
+  line-height: 25px;
+}
+#time #beep {
+  font-size: 18px;
+  color: #313132;
+}
+#time #rem-time {
+  color: #B3B3B3;
+  font-size: 13px;
+}
+
+#bid {
+  line-height: 25px;
+}
+#bid #cost {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  color: #313132;
+  font-size: 18px;
+}
+#bid #highest-bid {
+  color: #B3B3B3;
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=output.css.map */
