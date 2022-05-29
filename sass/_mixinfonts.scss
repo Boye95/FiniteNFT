@@ -1,0 +1,18 @@
+@import url("https://api.fontshare.com/css?f[]=general-sans@400,500,600,700&display=swap");
+
+// Font variables
+$General-Sans: "General Sans", sans-serif;
+
+// My mixins
+@mixin general-bold {
+    font-family: $General-Sans;
+    font-weight: 700;
+}
+@mixin general-semibold {
+    font-family: $General-Sans;
+    font-weight: 600;
+}
+@mixin general-medium {
+    font-family: $General-Sans;
+    font-weight: 500;  
+}
