@@ -88,3 +88,34 @@ header {
         }
     }
 }
+
+#banner {
+    margin-top: 5rem;
+    display: flex;
+    height: 70%;
+}
+
+#text-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 60%;
+    margin-left: 4rem;
+    #big-text {
+        @include general-semibold;
+        font-size: 60px;
+        color: #49536E;
+    }
+    #small-text {
+        @include general-medium;
+        font-size: 18px;
+        color: #49536E;
+    }
+    #bot {
+        display: flex;
+    }
+}
+
+#nft-section {
+    width: 40%;
+}

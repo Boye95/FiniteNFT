@@ -82,4 +82,37 @@ header #nav .wallet {
   border-radius: 15px;
 }
 
+#banner {
+  margin-top: 5rem;
+  display: flex;
+  height: 70%;
+}
+
+#text-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 60%;
+  margin-left: 4rem;
+}
+#text-banner #big-text {
+  font-family: "General Sans", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  color: #49536E;
+}
+#text-banner #small-text {
+  font-family: "General Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #49536E;
+}
+#text-banner #bot {
+  display: flex;
+}
+
+#nft-section {
+  width: 40%;
+}
+
 /*# sourceMappingURL=output.css.map */
