@@ -15,9 +15,8 @@ body {
 }
 
 #container {
-  width: 85vw;
+  width: 89vw;
   height: 90vh;
-  border: 2px solid black;
 }
 
 header {
@@ -30,6 +29,11 @@ header #logo {
   font-weight: 700;
   font-size: 24px;
   background: -webkit-linear-gradient(45deg, #B182FF, #8310C9, #5315D9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header #logo:hover {
+  background: -webkit-linear-gradient(45deg, #000000, #000000, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -56,7 +60,7 @@ header #search-box input {
   font-family: "General Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: white;
+  color: rgb(99, 97, 97);
   outline: none;
 }
 header #nav {
@@ -82,41 +86,47 @@ header #nav .wallet {
   border-radius: 15px;
 }
 header #nav .wallet:hover {
-  background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
+  background: black;
   color: white;
 }
 
 #banner {
   margin-top: 5rem;
   display: flex;
-  height: 70%;
+  height: 70vh;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8rem;
 }
 
 #text-banner {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  justify-content: flex-end;
+  gap: 2rem;
   height: 70%;
-  width: 60%;
+  width: 55%;
   margin-left: 4rem;
 }
 #text-banner #big-text {
   font-family: "General Sans", sans-serif;
   font-weight: 600;
-  font-size: 60px;
+  font-size: 70px;
   color: #49536E;
 }
 #text-banner #small-text {
   font-family: "General Sans", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   color: #49536E;
+  width: 70%;
 }
 #text-banner #bot {
   font-family: "General Sans", sans-serif;
   font-weight: 600;
   display: flex;
   gap: 2rem;
+  margin-bottom: 5rem;
 }
 #text-banner button {
   background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
@@ -129,11 +139,18 @@ header #nav .wallet:hover {
   font-weight: 600;
   cursor: pointer;
 }
+#text-banner button:hover {
+  background: black;
+  color: white;
+}
 #text-banner #play {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+#text-banner #play:hover {
+  color: rgb(63, 63, 63);
 }
 
 #nft-section {
@@ -143,31 +160,35 @@ header #nav .wallet:hover {
 }
 
 .border1 {
-  height: 30rem;
+  height: 32rem;
 }
 
 .border2 {
-  height: 30rem;
+  height: 32rem;
   transform: scaleX(-1);
   position: relative;
-  top: -30rem;
+  top: -32rem;
 }
 
 .nft {
-  height: 20rem;
+  height: 22rem;
   position: relative;
-  top: -58.8rem;
-  left: 1.5rem;
+  top: -62.8rem;
+  left: 1.3rem;
   transform: rotate(1deg);
+}
+.nft:hover {
+  transform: scale(1.02);
+  transition: 2s ease-in-out;
 }
 
 #countdown {
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: -57rem;
+  top: -61rem;
   left: 3rem;
-  width: 18rem;
+  width: 21rem;
   font-family: "General Sans", sans-serif;
   font-weight: 600;
   transform: rotate(-3deg);
@@ -196,9 +217,80 @@ header #nav .wallet:hover {
   color: #313132;
   font-size: 18px;
 }
+#bid #cost:hover {
+  transform: translateY(-5px);
+  transition: 1s ease;
+}
 #bid #highest-bid {
   color: #B3B3B3;
   font-size: 13px;
+}
+
+@media screen and (max-width: 1330px) {
+  #banner {
+    margin-top: 8rem;
+    gap: 1rem;
+  }
+
+  #text-banner #big-text {
+    font-size: 70px;
+  }
+  #text-banner #small-text {
+    font-size: 14px;
+  }
+  #text-banner #bot {
+    margin-bottom: 8rem;
+  }
+
+  .border1 {
+    height: 28rem;
+  }
+
+  .border2 {
+    height: 28rem;
+    top: -28rem;
+  }
+
+  .nft {
+    height: 19rem;
+    top: -55rem;
+    left: 1.3rem;
+  }
+
+  #countdown {
+    top: -53.5rem;
+    left: 3rem;
+    width: 18rem;
+  }
+}
+@media screen and (max-width: 1110px) {
+  body {
+    height: 100%;
+  }
+
+  #container {
+    margin-top: 3rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  #banner {
+    margin-top: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70rem;
+  }
+  #banner #text-banner {
+    justify-content: center;
+    align-items: center;
+  }
+  #banner #text-banner #big-text {
+    text-align: center;
+  }
+  #banner #text-banner #small-text {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
