@@ -32,6 +32,7 @@ header {
         background: -webkit-linear-gradient(45deg, #B182FF, #8310C9, #5315D9);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
         &:hover {
             background: -webkit-linear-gradient(45deg, #000000, #000000, #000000);
             -webkit-background-clip: text;
@@ -89,9 +90,27 @@ header {
             color: white;
             padding: 10px 20px;
             border-radius: 15px;
+
             &:hover {
-                background: black;
+                background: #000000;
                 color: white;
+            }
+        }
+    }
+
+    #ham {
+        display: none;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        .ham {
+            img {
+                width: 40px;
+                filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
+
+                &:hover {
+                    filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
+                }
             }
         }
     }
@@ -105,6 +124,7 @@ header {
     align-items: flex-end;
     gap: 8rem;
 }
+
 #text-banner {
     display: flex;
     flex-direction: column;
@@ -113,23 +133,27 @@ header {
     height: 70%;
     width: 55%;
     margin-left: 4rem;
+
     #big-text {
         @include general-semibold;
         font-size: 70px;
         color: #49536E;
     }
+
     #small-text {
         @include general-medium;
         font-size: 15px;
         color: #49536E;
         width: 70%;
     }
+
     #bot {
         @include general-semibold;
         display: flex;
         gap: 2rem;
         margin-bottom: 5rem;
     }
+
     button {
         background: -webkit-linear-gradient(#B182FF, #981ce6, #5315D9);
         color: white;
@@ -139,16 +163,19 @@ header {
         outline: none;
         @include general-semibold;
         cursor: pointer;
+
         &:hover {
             background: black;
             color: white;
         }
     }
+
     #play {
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
         &:hover {
             color: rgb(63, 63, 63);
         }
@@ -178,6 +205,7 @@ header {
     top: -62.8rem;
     left: 1.3rem;
     transform: rotate(1deg);
+
     &:hover {
         transform: scale(1.02);
         transition: 2s ease-in-out;
@@ -197,10 +225,12 @@ header {
 
 #time {
     line-height: 25px;
+
     #beep {
         font-size: 18px;
         color: #313132;
     }
+
     #rem-time {
         color: #B3B3B3;
         font-size: 13px;
@@ -209,6 +239,7 @@ header {
 
 #bid {
     line-height: 25px;
+
     #cost {
         display: flex;
         justify-content: flex-end;
@@ -216,11 +247,13 @@ header {
         gap: 7px;
         color: #313132;
         font-size: 18px;
+
         &:hover {
             transform: translateY(-5px);
             transition: 1s ease;
         }
     }
+
     #highest-bid {
         color: #B3B3B3;
         font-size: 13px;
@@ -232,64 +265,152 @@ header {
         margin-top: 8rem;
         gap: 1rem;
     }
+
     #text-banner {
         #big-text {
             font-size: 70px;
         }
+
         #small-text {
             font-size: 14px;
         }
+
         #bot {
-        margin-bottom: 8rem;
+            margin-bottom: 8rem;
+        }
     }
-    }
-    
+
     .border1 {
         height: 28rem;
     }
-    
+
     .border2 {
         height: 28rem;
         top: -28rem;
     }
-    
+
     .nft {
         height: 19rem;
         top: -55rem;
         left: 1.3rem;
     }
-    
+
     #countdown {
         top: -53.5rem;
         left: 3rem;
         width: 18rem;
     }
-    
+
 }
 
 @media screen and (max-width: 1110px) {
     body {
         height: 100%;
     }
+
     #container {
         margin-top: 3rem;
         height: 100%;
-        width: 100%;
+        width: 90vw;
     }
+
+    header {
+        #search-box {
+            width: 50%;
+        }
+
+        #nav {
+            display: none;
+        }
+
+        #ham {
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+
+
+
     #banner {
         margin-top: 5rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 70rem;
+
         #text-banner {
             justify-content: center;
             align-items: center;
+
             #big-text {
                 text-align: center;
             }
+
             #small-text {
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        #search-box {
+            width: 0;
+            height: 0;
+            justify-content: flex-end;
+            background-color: white;
+            border: 3px solid #f5f5f5;
+
+            img {
+                filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
+
+                &:hover {
+                    filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
+                }
+            }
+
+            input {
+                display: flex;
+                position: absolute;
+                top: 6rem;
+                right: 2rem;
+                width: 90%;
+                height: 50px;
+                padding: 0.5rem;
+                @include general-medium;
+                font-size: 18px;
+                color: rgb(99, 97, 97);
+                outline: none;
+                background-color: white;
+                border: 3px solid #f5f5f5;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #container {
+        margin-top: 1.5rem;
+    }
+
+    header {
+        background-color: #000000;
+        justify-content: space-between;
+
+        #search-box {
+            width: 40%;
+            height: 0;
+            justify-content: flex-end;
+            
+            img {
+                background-color: #49536E;
+            }
+            input {
+                top: 5rem;
+                right: 1rem;
             }
         }
     }
