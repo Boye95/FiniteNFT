@@ -326,7 +326,6 @@ header {
         #ham {
             display: flex;
             justify-content: space-between;
-
         }
     }
 
@@ -357,11 +356,11 @@ header {
 @media screen and (max-width: 600px) {
     header {
         #search-box {
-            width: 0;
-            height: 0;
+            width: 45%;
+            height: 3rem;
             justify-content: flex-end;
-            background-color: white;
-            border: 3px solid #f5f5f5;
+            background-color: #FAFAFB;
+            border: none;
 
             img {
                 filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
@@ -397,21 +396,107 @@ header {
     }
 
     header {
-        background-color: #000000;
         justify-content: space-between;
 
         #search-box {
             width: 40%;
-            height: 0;
+            height: 3rem;
             justify-content: flex-end;
-            
-            img {
-                background-color: #49536E;
-            }
+            background-color: #FAFAFB;
+            border: none;
+
             input {
                 top: 5rem;
                 right: 1rem;
             }
         }
+
+        #ham {
+            .ham {
+                img {
+                    width: 30px;
+                }
+            }
+        }
     }
+
+    #banner {
+        margin-top: 4rem;
+        width: 100%;
+        gap: 0;
+    }
+
+    #text-banner {
+        margin-left: 0;
+        width: 100%;
+
+        #big-text {
+            font-size: 40px;
+        }
+
+        #small-text {
+            font-size: 14px;
+        }
+        button {
+            padding: 10px;
+        }
+    
+        #play {
+            font-size: 13px;
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    #nft-section {
+        width: 90%;
+    }
+
+    .border1 {
+        height: 25rem;
+    }
+
+    .border2 {
+        height: 25rem;
+        top: -25rem;
+    }
+
+    .nft {
+        height: 18rem;
+        top: -49rem;
+        left: 0.6rem;
+    }
+
+    #countdown {
+        top: -48rem;
+        left: 2rem;
+        width: 17rem;
+    }
+
+    #time {
+        line-height: 25px;
+
+        #beep {
+            font-size: 15px;
+        }
+
+        #rem-time {
+            font-size: 11px;
+        }
+    }
+
+    #bid {
+        line-height: 25px;
+
+        #cost {
+            font-size: 15px;
+        }
+
+        #highest-bid {
+            color: #B3B3B3;
+            font-size: 11px;
+        }
+    }
+
 }
