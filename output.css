@@ -117,7 +117,7 @@ header #ham .ham img:hover {
   justify-content: flex-end;
   gap: 2rem;
   height: 70%;
-  width: 55%;
+  width: 45%;
   margin-left: 4rem;
 }
 #text-banner #big-text {
@@ -163,6 +163,12 @@ header #ham .ham img:hover {
 }
 #text-banner #play:hover {
   color: rgb(63, 63, 63);
+}
+#text-banner #nft-section {
+  width: 40%;
+}
+#text-banner #nft-section .nft {
+  width: 5rem;
 }
 
 #countdown {

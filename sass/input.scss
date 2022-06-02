@@ -131,7 +131,7 @@ header {
     justify-content: flex-end;
     gap: 2rem;
     height: 70%;
-    width: 55%;
+    width: 45%;
     margin-left: 4rem;
 
     #big-text {
@@ -180,6 +180,15 @@ header {
             color: rgb(63, 63, 63);
         }
     }
+
+    #nft-section {
+        width: 40%;
+
+        .nft {
+            width: 5rem;
+        }
+    }
+
 }
 
 #countdown {
