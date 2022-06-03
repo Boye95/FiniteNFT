@@ -13,12 +13,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 #container {
     width: 89vw;
     height: 90vh;
+    margin-top: 3rem;
 }
 
 header {
@@ -65,6 +66,10 @@ header {
             font-size: 18px;
             color: rgb(99, 97, 97);
             outline: none;
+        }
+
+        &:focus-within {
+            box-shadow: -1px 2px 19px -5px rgba(209, 208, 208, 0.75);
         }
     }
 
@@ -130,21 +135,22 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     gap: 2rem;
-    height: 70%;
-    width: 45%;
-    margin-left: 4rem;
+    height: 100%;
+    width: 46%;
+    margin-left: 3rem;
 
     #big-text {
         @include general-semibold;
         font-size: 70px;
-        color: #49536E;
+        color: #2e2e30;
+        width: 35rem
     }
 
     #small-text {
         @include general-medium;
         font-size: 15px;
         color: #49536E;
-        width: 70%;
+        width: 29rem;
     }
 
     #bot {
@@ -181,95 +187,76 @@ header {
         }
     }
 
-    #nft-section {
-        width: 40%;
-
-        .nft {
-            width: 5rem;
-        }
-    }
-
 }
 
-#countdown {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: -61rem;
-    left: 3rem;
-    width: 21rem;
-    @include general-semibold;
-    transform: rotate(-3deg);
-}
+#nft-section {
+    width: 37%;
 
-#time {
-    line-height: 25px;
-
-    #beep {
-        font-size: 18px;
-        color: #313132;
-    }
-
-    #rem-time {
-        color: #B3B3B3;
-        font-size: 13px;
-    }
-}
-
-#bid {
-    line-height: 25px;
-
-    #cost {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 7px;
-        color: #313132;
-        font-size: 18px;
+    .nft {
+        width: 26rem;
 
         &:hover {
-            transform: translateY(-5px);
-            transition: 1s ease;
+            transform: rotate(1deg);
+            transition: all 0.9s ease;
         }
     }
 
-    #highest-bid {
-        color: #B3B3B3;
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 1330px) {
-    #banner {
-        gap: 1rem;
-        width: 100%;
-    }
-
-    #text-banner {
-        #big-text {
-            font-size: 5vw;
-        }
-
-        #small-text {
-            font-size: 14px;
-        }
-
-        #bot {
-            margin-bottom: 8rem;
-        }
-    }
     #countdown {
-        top: -53.5rem;
-        left: 3rem;
-        width: 18rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -7rem;
+        left: 3.5rem;
+        width: 19.9rem;
+        @include general-semibold;
+        transform: rotate(-4deg);
     }
 
+    #time {
+        line-height: 25px;
+
+        #beep {
+            font-size: 18px;
+            color: #313132;
+        }
+
+        #rem-time {
+            color: #B3B3B3;
+            font-size: 13px;
+        }
+    }
+
+    #bid {
+        line-height: 25px;
+
+        #cost {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 7px;
+            color: #313132;
+            font-size: 18px;
+
+            &:hover {
+                transform: translateY(-5px);
+                transition: 1s ease;
+            }
+        }
+
+        #highest-bid {
+            color: #B3B3B3;
+            font-size: 13px;
+        }
+    }
+
+
 }
+
+// MEDIA QUERIES
+
+// Media query for 1110px screen size
 
 @media screen and (max-width: 1110px) {
-    body {
-        height: 100%;
-    }
 
     #container {
         margin-top: 3rem;
@@ -298,11 +285,12 @@ header {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 70rem;
+        height: auto;
+        gap: 2rem;
     }
 
     #text-banner {
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         margin-left: 0;
@@ -317,50 +305,45 @@ header {
     }
 
     #nft-section {
-        width: 50%;
-        left: 50%;
-        transform: translate(10%);
+        width: auto;
     }
 
 }
 
 
+// Media query for 600px screen size
+
 @media screen and (max-width: 600px) {
+    #container {
+        margin-top: 1rem;
+    }
+
     header {
         position: relative;
         justify-content: space-between;
 
         #search-box {
             position: absolute;
-            width: 80vw;
+            width: 90vw;
             top: 3rem;
             height: 3rem;
             left: 50%;
             transform: translate(-50%);
 
             img {
+                width: 25px;
                 filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
 
                 &:hover {
                     filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
                 }
             }
+
+            input {
+                font-size: 15px;
+            }
         }
-    }
 
-    #text-banner {
-        #bot {
-            margin-bottom: 3rem;
-        }
-    }
-}
-
-@media screen and (max-width: 490px) {
-    #container {
-        margin-top: 1.5rem;
-    }
-
-    header {
         #ham {
             .ham {
                 img {
@@ -371,21 +354,20 @@ header {
     }
 
     #banner {
-        width: 100%;
-        height: auto;
+        margin-top: 5rem;
     }
 
     #text-banner {
-        margin-top: 2rem;
-        margin-left: 0;
         width: 100%;
 
         #big-text {
             font-size: 40px;
+            width: 20rem;
         }
 
         #small-text {
-            font-size: 14px;
+            font-size: 13px;
+            width: 19rem;
         }
 
         button {
@@ -393,80 +375,51 @@ header {
         }
 
         #play {
-            font-size: 13px;
+            font-size: 14px;
+        }
+    }
 
-            img {
-                width: 30px;
+    #nft-section {
+
+        .nft {
+            width: 18rem;
+        }
+
+        #countdown {
+            top: -5rem;
+            left: 2.8rem;
+            width: 13.5rem;
+            transform: rotate(-4deg);
+        }
+
+        #time {
+            line-height: 20px;
+
+            #beep {
+                font-size: 14px;
+            }
+
+            #rem-time {
+                font-size: 10px;
             }
         }
-    }
 
+        #bid {
+            line-height: 20px;
 
-    #countdown {
-        top: -48rem;
-        left: 2rem;
-        width: 17rem;
-    }
+            #cost {
+                gap: 7px;
+                font-size: 14px;
 
-    #time {
-        line-height: 25px;
-
-        #beep {
-            font-size: 15px;
-        }
-
-        #rem-time {
-            font-size: 11px;
-        }
-    }
-
-    #bid {
-        line-height: 25px;
-
-        #cost {
-            font-size: 15px;
-        }
-
-        #highest-bid {
-            color: #B3B3B3;
-            font-size: 11px;
-        }
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        position: relative;
-        justify-content: space-between;
-
-        #search-box {
-            position: absolute;
-            width: 80vw;
-            top: 3rem;
-            height: 3rem;
-            left: 50%;
-            transform: translate(-50%);
-
-            img {
-                filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
-
-                &:hover {
-                    filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
+                img {
+                    width: 15px;
                 }
             }
+
+            #highest-bid {
+                font-size: 10px;
+            }
         }
     }
 
-    #text-banner {
-        #bot {
-            margin-bottom: 3rem;
-        }
-    }
-    #nft-section {
-        width: 80%;
-        left: 50%;
-        transform: translate(10%);
-    }
 }
-

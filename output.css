@@ -11,12 +11,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 #container {
   width: 89vw;
   height: 90vh;
+  margin-top: 3rem;
 }
 
 header {
@@ -62,6 +63,9 @@ header #search-box input {
   font-size: 18px;
   color: rgb(99, 97, 97);
   outline: none;
+}
+header #search-box:focus-within {
+  box-shadow: -1px 2px 19px -5px rgba(209, 208, 208, 0.75);
 }
 header #nav {
   display: flex;
@@ -116,22 +120,23 @@ header #ham .ham img:hover {
   flex-direction: column;
   justify-content: flex-end;
   gap: 2rem;
-  height: 70%;
-  width: 45%;
-  margin-left: 4rem;
+  height: 100%;
+  width: 46%;
+  margin-left: 3rem;
 }
 #text-banner #big-text {
   font-family: "General Sans", sans-serif;
   font-weight: 600;
   font-size: 70px;
-  color: #49536E;
+  color: #2e2e30;
+  width: 35rem;
 }
 #text-banner #small-text {
   font-family: "General Sans", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #49536E;
-  width: 70%;
+  width: 29rem;
 }
 #text-banner #bot {
   font-family: "General Sans", sans-serif;
@@ -164,41 +169,43 @@ header #ham .ham img:hover {
 #text-banner #play:hover {
   color: rgb(63, 63, 63);
 }
-#text-banner #nft-section {
-  width: 40%;
-}
-#text-banner #nft-section .nft {
-  width: 5rem;
-}
 
-#countdown {
+#nft-section {
+  width: 37%;
+}
+#nft-section .nft {
+  width: 26rem;
+}
+#nft-section .nft:hover {
+  transform: rotate(1deg);
+  transition: all 0.9s ease;
+}
+#nft-section #countdown {
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: -61rem;
-  left: 3rem;
-  width: 21rem;
+  top: -7rem;
+  left: 3.5rem;
+  width: 19.9rem;
   font-family: "General Sans", sans-serif;
   font-weight: 600;
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
 }
-
-#time {
+#nft-section #time {
   line-height: 25px;
 }
-#time #beep {
+#nft-section #time #beep {
   font-size: 18px;
   color: #313132;
 }
-#time #rem-time {
+#nft-section #time #rem-time {
   color: #B3B3B3;
   font-size: 13px;
 }
-
-#bid {
+#nft-section #bid {
   line-height: 25px;
 }
-#bid #cost {
+#nft-section #bid #cost {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -206,42 +213,16 @@ header #ham .ham img:hover {
   color: #313132;
   font-size: 18px;
 }
-#bid #cost:hover {
+#nft-section #bid #cost:hover {
   transform: translateY(-5px);
   transition: 1s ease;
 }
-#bid #highest-bid {
+#nft-section #bid #highest-bid {
   color: #B3B3B3;
   font-size: 13px;
 }
 
-@media screen and (max-width: 1330px) {
-  #banner {
-    gap: 1rem;
-    width: 100%;
-  }
-
-  #text-banner #big-text {
-    font-size: 5vw;
-  }
-  #text-banner #small-text {
-    font-size: 14px;
-  }
-  #text-banner #bot {
-    margin-bottom: 8rem;
-  }
-
-  #countdown {
-    top: -53.5rem;
-    left: 3rem;
-    width: 18rem;
-  }
-}
 @media screen and (max-width: 1110px) {
-  body {
-    height: 100%;
-  }
-
   #container {
     margin-top: 3rem;
     height: 100%;
@@ -265,11 +246,12 @@ header #ham .ham img:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70rem;
+    height: auto;
+    gap: 2rem;
   }
 
   #text-banner {
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin-left: 0;
@@ -282,125 +264,92 @@ header #ham .ham img:hover {
   }
 
   #nft-section {
-    width: 50%;
-    left: 50%;
-    transform: translate(10%);
+    width: auto;
   }
 }
 @media screen and (max-width: 600px) {
+  #container {
+    margin-top: 1rem;
+  }
+
   header {
     position: relative;
     justify-content: space-between;
   }
   header #search-box {
     position: absolute;
-    width: 80vw;
+    width: 90vw;
     top: 3rem;
     height: 3rem;
     left: 50%;
     transform: translate(-50%);
   }
   header #search-box img {
+    width: 25px;
     filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
   }
   header #search-box img:hover {
     filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
   }
-
-  #text-banner #bot {
-    margin-bottom: 3rem;
+  header #search-box input {
+    font-size: 15px;
   }
-}
-@media screen and (max-width: 490px) {
-  #container {
-    margin-top: 1.5rem;
-  }
-
   header #ham .ham img {
     width: 30px;
   }
 
   #banner {
-    width: 100%;
-    height: auto;
+    margin-top: 5rem;
   }
 
   #text-banner {
-    margin-top: 2rem;
-    margin-left: 0;
     width: 100%;
   }
   #text-banner #big-text {
     font-size: 40px;
+    width: 20rem;
   }
   #text-banner #small-text {
-    font-size: 14px;
+    font-size: 13px;
+    width: 19rem;
   }
   #text-banner button {
     padding: 10px;
   }
   #text-banner #play {
-    font-size: 13px;
-  }
-  #text-banner #play img {
-    width: 30px;
+    font-size: 14px;
   }
 
-  #countdown {
-    top: -48rem;
-    left: 2rem;
-    width: 17rem;
+  #nft-section .nft {
+    width: 18rem;
   }
-
-  #time {
-    line-height: 25px;
+  #nft-section #countdown {
+    top: -5rem;
+    left: 2.8rem;
+    width: 13.5rem;
+    transform: rotate(-4deg);
   }
-  #time #beep {
-    font-size: 15px;
+  #nft-section #time {
+    line-height: 20px;
   }
-  #time #rem-time {
-    font-size: 11px;
+  #nft-section #time #beep {
+    font-size: 14px;
   }
-
-  #bid {
-    line-height: 25px;
+  #nft-section #time #rem-time {
+    font-size: 10px;
   }
-  #bid #cost {
-    font-size: 15px;
+  #nft-section #bid {
+    line-height: 20px;
   }
-  #bid #highest-bid {
-    color: #B3B3B3;
-    font-size: 11px;
+  #nft-section #bid #cost {
+    gap: 7px;
+    font-size: 14px;
   }
-}
-@media screen and (max-width: 600px) {
-  header {
-    position: relative;
-    justify-content: space-between;
+  #nft-section #bid #cost img {
+    width: 15px;
   }
-  header #search-box {
-    position: absolute;
-    width: 80vw;
-    top: 3rem;
-    height: 3rem;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  header #search-box img {
-    filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
-  }
-  header #search-box img:hover {
-    filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
-  }
-
-  #text-banner #bot {
-    margin-bottom: 3rem;
-  }
-
-  #nft-section {
-    width: 80%;
-    left: 50%;
-    transform: translate(10%);
+  #nft-section #bid #highest-bid {
+    font-size: 10px;
   }
 }
 
