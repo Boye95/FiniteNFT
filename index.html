@@ -73,7 +73,11 @@
         <!-- Code for navbar display in smaller screens -->
 
         <div id="nav-res">
-            <img src="files/cancel.svg" alt="cancel">
+            <img src="files/cancel.svg" alt="cancel" class="closeBtn">
+            <div id="search-box-side">
+                <img src="/files/search.svg" alt="search-button">
+                <input type="text" placeholder="Search for “crypto punks”" id="search-input">
+            </div>
             <div id="nav-side">
                 <a href="#" class="link">Explore <img src="files/arrow.svg" alt="ar"></a>
                 <a href="#" class="link">Create <img src="files/arrow.svg" alt="ar"></a>
@@ -81,6 +85,8 @@
                 <a href="#" class="link wallet">Connect Wallet</a>
             </div>
         </div>
+
+        <div class="overlay"></div>
     </div>
 
     <script src="script.js"></script>

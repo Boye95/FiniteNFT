@@ -7,6 +7,26 @@
     margin: 0;
 }
 
+// Styling the scrollbar
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8310C9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #030303;
+}
+
+// Styling the body
+
 body {
     background-image: url(/files/backdrop.png);
     background-size: cover;
@@ -84,6 +104,7 @@ header {
 
         a {
             text-decoration: none;
+            cursor: pointer;
 
             &:hover {
                 color: #B182FF;
@@ -95,6 +116,7 @@ header {
             color: white;
             padding: 10px 20px;
             border-radius: 15px;
+            cursor: pointer;
 
             &:hover {
                 background: #000000;
@@ -110,6 +132,7 @@ header {
         gap: 1.5rem;
 
         img {
+            cursor: pointer;
             width: 40px;
             filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
 
@@ -252,27 +275,74 @@ header {
 }
 
 // Style for navbar display in smaller screens
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
 
 #nav-res {
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -40vw;
     background-color: #f5f5f5;
-    box-shadow: -5px 0px 8px 0px rgba(48,47,47,0.75);
+    transition: all 0.5s ease;
     height: 100%;
-    width: 40vw;
+    width: 0;
     padding: 1rem;
     z-index: 99;
     @include general-semibold;
     font-size: 18px;
-    
+
     img {
+        cursor: pointer;
         width: 40px;
         filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
 
         &:hover {
             filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
+        }
+    }
+
+    #search-box-side {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        border: 3px solid #f5f5f5;
+        border-radius: 10px;
+
+        img {
+            margin-left: 5px;
+            width: 30px;
+            height: 30px;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin-left: 8px;
+            background-color: transparent;
+            @include general-medium;
+            font-size: 18px;
+            color: rgb(99, 97, 97);
+            outline: none;
+        }
+
+        &:focus-within {
+            box-shadow: -1px 2px 19px -5px rgba(209, 208, 208, 0.75);
         }
     }
 
@@ -288,7 +358,6 @@ header {
         .link {
             text-decoration: none;
             color: #0F1D40;
-            // border: 1px solid #B182FF;
             width: 100%;
             padding: 10px;
             display: flex;
@@ -318,6 +387,7 @@ header {
         }
     }
 }
+
 // MEDIA QUERIES
 
 // Media query for 1110px screen size
@@ -376,6 +446,20 @@ header {
 
 }
 
+// Media query for 800px screen size
+@media screen and (max-width: 800px) {
+    #nav-res {
+        #nav-side {
+            background-color: #0F1D40;
+            height: 100%;
+            .wallet {
+                width: 100%;
+                justify-content: center;
+                align-self: flex-end;
+            }
+        }
+    }
+}
 
 // Media query for 600px screen size
 

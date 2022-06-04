@@ -5,6 +5,22 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8310C9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #030303;
+}
+
 body {
   background-image: url(/files/backdrop.png);
   background-size: cover;
@@ -79,6 +95,7 @@ header #nav {
 }
 header #nav a {
   text-decoration: none;
+  cursor: pointer;
 }
 header #nav a:hover {
   color: #B182FF;
@@ -88,6 +105,7 @@ header #nav .wallet {
   color: white;
   padding: 10px 20px;
   border-radius: 15px;
+  cursor: pointer;
 }
 header #nav .wallet:hover {
   background: #000000;
@@ -100,6 +118,7 @@ header #ham {
   gap: 1.5rem;
 }
 header #ham img {
+  cursor: pointer;
   width: 40px;
   filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
 }
@@ -223,15 +242,29 @@ header #ham img:hover {
   font-size: 13px;
 }
 
-#nav-res {
+.overlay {
+  position: fixed;
   display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#nav-res {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -40vw;
   background-color: #f5f5f5;
-  box-shadow: -5px 0px 8px 0px rgba(48, 47, 47, 0.75);
+  transition: all 0.5s ease;
   height: 100%;
-  width: 40vw;
+  width: 0;
   padding: 1rem;
   z-index: 99;
   font-family: "General Sans", sans-serif;
@@ -239,11 +272,41 @@ header #ham img:hover {
   font-size: 18px;
 }
 #nav-res img {
+  cursor: pointer;
   width: 40px;
   filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
 }
 #nav-res img:hover {
   filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
+}
+#nav-res #search-box-side {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: 3px solid #f5f5f5;
+  border-radius: 10px;
+}
+#nav-res #search-box-side img {
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+}
+#nav-res #search-box-side input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin-left: 8px;
+  background-color: transparent;
+  font-family: "General Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(99, 97, 97);
+  outline: none;
+}
+#nav-res #search-box-side:focus-within {
+  box-shadow: -1px 2px 19px -5px rgba(209, 208, 208, 0.75);
 }
 #nav-res #nav-side {
   display: flex;
@@ -324,6 +387,17 @@ header #ham img:hover {
 
   #nft-section {
     width: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  #nav-res #nav-side {
+    background-color: #0F1D40;
+    height: 100%;
+  }
+  #nav-res #nav-side .wallet {
+    width: 100%;
+    justify-content: center;
+    align-self: flex-end;
   }
 }
 @media screen and (max-width: 600px) {
