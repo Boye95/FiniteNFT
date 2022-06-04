@@ -296,7 +296,7 @@ header {
     top: 0;
     right: -40vw;
     background-color: #f5f5f5;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     height: 100%;
     width: 0;
     padding: 1rem;
@@ -390,9 +390,19 @@ header {
 
 // MEDIA QUERIES
 
+// Media Query for 1330px and below
+@media screen and (max-width: 1330px) {
+    body {
+        background-size: 120%;
+    }
+}
+
 // Media query for 1110px screen size
 
 @media screen and (max-width: 1110px) {
+    body {
+        background-size: cover;
+    }
 
     #container {
         margin-top: 3rem;
@@ -449,7 +459,7 @@ header {
 // Media query for 800px screen size
 @media screen and (max-width: 800px) {
     #nav-res {
-        width: 100vw;
+        // width: 100vw;
         
         #nav-side {
             height: 100%;
