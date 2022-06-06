@@ -458,66 +458,6 @@ header {
 
 // Media query for 800px screen size
 @media screen and (max-width: 800px) {
-    #nav-res {
-        // width: 100vw;
-        
-        #nav-side {
-            height: 100%;
-            justify-content: flex-start;
-
-            .wallet {
-                width: 100%;
-                justify-content: center;
-                position: relative;
-                top: 25rem;
-            }
-        }
-    }
-}
-
-// Media query for 600px screen size
-
-@media screen and (max-width: 600px) {
-    #container {
-        margin-top: 1rem;
-    }
-
-    header {
-        position: relative;
-        justify-content: space-between;
-
-        #search-box {
-            position: absolute;
-            width: 90vw;
-            top: 3rem;
-            height: 3rem;
-            left: 50%;
-            transform: translate(-50%);
-
-            img {
-                width: 25px;
-                filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
-
-                &:hover {
-                    filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
-                }
-            }
-
-            input {
-                font-size: 15px;
-            }
-        }
-
-        #ham {
-            img {
-                width: 35px;
-            }
-        }
-    }
-
-    #banner {
-        margin-top: 5rem;
-    }
 
     #text-banner {
         width: 100%;
@@ -583,5 +523,69 @@ header {
             }
         }
     }
+
+    #nav-res {
+        // width: 100vw;
+
+        #nav-side {
+            height: 100%;
+            justify-content: flex-start;
+
+            .wallet {
+                width: 90%;
+                justify-content: center;
+                position: absolute;
+                bottom: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+// Media query for 600px screen size
+
+@media screen and (max-width: 600px) {
+    #container {
+        margin-top: 1rem;
+    }
+
+    header {
+        position: relative;
+        justify-content: space-between;
+
+        #search-box {
+            position: absolute;
+            width: 90vw;
+            top: 3rem;
+            height: 3rem;
+            left: 50%;
+            transform: translate(-50%);
+
+            img {
+                width: 25px;
+                filter: invert(15%) sepia(79%) saturate(5088%) hue-rotate(259deg) brightness(81%) contrast(114%);
+
+                &:hover {
+                    filter: invert(0%) sepia(93%) saturate(30%) hue-rotate(156deg) brightness(103%) contrast(108%);
+                }
+            }
+
+            input {
+                font-size: 15px;
+            }
+        }
+
+        #ham {
+            img {
+                width: 35px;
+            }
+        }
+    }
+
+    #banner {
+        margin-top: 5rem;
+    }
+
 
 }

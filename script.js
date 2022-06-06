@@ -75,7 +75,7 @@ let x = setInterval(function () {
   }
 }, 1000);
 
-// the original code
+// the initial code
 
 // (function () {
 //   ham.addEventListener("click", () => {
